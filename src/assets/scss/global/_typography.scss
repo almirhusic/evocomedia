@@ -1,61 +1,8 @@
 @font-face {
     font-family: 'Web Pro';
-    src: url('../fonts/FF-DIN-Web-Pro/DINWebPro-Regular.woff');
-    font-weight: 400;
+    src: url('../fonts/DINWebPro/DINWebPro-Regular.eot');
+    src: url('../fonts/DINWebPro/DINWebPro-Regular.eot#iefix'),
+         url('../fonts/DINWebPro/DINWebPro-Regular.woff');
+    font-weight: normal;
     font-style: normal;
-}
-
-@font-face {
-    font-family: 'Web Pro';
-    src: url('../fonts/FF-DIN-Web-Pro/DINWebPro-RegularItalic.eot');
-    font-weight: 400;
-    font-style: italic;
-}
-
-@font-face {
-    font-family: 'Web Pro';
-    src: url('../fonts/FF-DIN-Web-Pro/DINWebPro-Bold.eot'),
-         url('../fonts/FF-DIN-Web-Pro/DINWebPro-Bold.woff');
-    font-weight: 700;
-    font-style: normal;
-}
-
-@font-face {
-    font-family: 'Web Pro';
-    src: url('../fonts/FF-DIN-Web-Pro/DINWebPro-BoldIta.eot'),
-         url('../fonts/FF-DIN-Web-Pro/DINWebPro-BoldIta.woff');
-    font-weight: 700;
-    font-style: italic;
-}
-
-@font-face {
-    font-family: 'Web Pro';
-    src: url('../fonts/FF-DIN-Web-Pro/DINWebPro-Light.eot'),
-         url('../fonts/FF-DIN-Web-Pro/DINWebPro-Light.woff');
-    font-weight: 300;
-    font-style: normal;
-}
-
-@font-face {
-    font-family: 'Web Pro';
-    src: url('../fonts/FF-DIN-Web-Pro/DINWebPro-LightIta.eot'),
-         url('../fonts/FF-DIN-Web-Pro/DINWebPro-LightIta.woff');
-    font-weight: 300;
-    font-style: italic;
-}
-
-@font-face {
-    font-family: 'Web Pro';
-    src: url('../fonts/FF-DIN-Web-Pro/DINWebPro-Black.eot'),
-         url('../fonts/FF-DIN-Web-Pro/DINWebPro-Black.woff');
-    font-weight: 900;
-    font-style: normal;
-}
-
-@font-face {
-    font-family: 'Web Pro';
-    src: url('../fonts/FF-DIN-Web-Pro/DINWebPro-BlackIta.eot'),
-         url('../fonts/FF-DIN-Web-Pro/DINWebPro-BlackIta.woff');
-    font-weight: 900;
-    font-style: italic;
 }
