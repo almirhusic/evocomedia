@@ -1,0 +1,9 @@
+nav:
+  -
+    link: '#services'
+    text: Services
+    id: services_link_nav
+  -
+    link: '#contact'
+    text: Contact us
+    id: contact_link_nav

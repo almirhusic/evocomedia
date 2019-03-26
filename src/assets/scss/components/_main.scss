@@ -1,0 +1,29 @@
+body{
+  background-image: url('../img/background.png');
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+}
+body{
+  display: flex;
+  min-height: 100vh;
+  flex-direction: column;
+}
+main{
+  flex: 1;
+  padding-top: 15px;
+  padding-bottom: 15px;
+}
+header .wrap{
+  padding: 0;
+}
+.wrap{
+  width: 100%;
+  margin: 0 auto;
+  padding: 0 56px;
+}
+.wrap #services.inactive,
+.wrap #contact.inactive{
+  display: none;
+}
+/* =============== MEDIA QUERIES ===============*/
