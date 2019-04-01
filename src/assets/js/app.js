@@ -16,6 +16,6 @@ require('foundation-sites');
 
 $(document).foundation();
 
-require('./custom/nav');
+require('./custom/header-nav');
 require('./custom/main-contactForm');
 //require('./custom/footer');

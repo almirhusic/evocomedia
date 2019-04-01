@@ -5,6 +5,8 @@ $( document ).ready( function ($) {
     init: function () {
       headerNav.dom();
       headerNav.events();
+
+      headerNav.checkUrl();
     },
 
     dom: function () {
@@ -13,13 +15,10 @@ $( document ).ready( function ($) {
       headerNav.$navToggle = headerNav.$nav.find('#menuBtn');
       headerNav.$menuItems = headerNav.$nav.find('.menu-items');
       headerNav.$logo = headerNav.$header.find('.logo');
-      headerNav.$main = $("#main");
+      headerNav.$main = $('#main');
     },
 
     events: function () {
-
-      headerNav.checkUrl();
-
       //open navigation
       headerNav.$navToggle.on('click', function () {
         if(!headerNav.$menuItems.hasClass('active')){
@@ -31,12 +30,12 @@ $( document ).ready( function ($) {
 
       //show section for clicked ID
       headerNav.$menuItems.on('click', function (e) {
-        var sectionID = e.target.href.substring(e.target.href.indexOf('#'));
-        headerNav.showSection(sectionID);    
+        var sectionId = e.target.href.substring(e.target.href.indexOf('#'));
+        headerNav.showSection(sectionId);    
       });
 
       //close all section on logo click
-      headerNav.$logo.on("click", function () {
+      headerNav.$logo.on('click', function () {
         headerNav.closeNav();
         headerNav.closeSections();
       });
@@ -52,27 +51,34 @@ $( document ).ready( function ($) {
       headerNav.$menuItems.removeClass('active');
     },
 
-    showSection: function(sectionID){
-      headerNav.closeSections();
-      if(sectionID.length > 1){
-        var targetDiv = headerNav.$main.find(sectionID);
-      targetDiv.addClass("active");
+    showSection: function(sectionId){
+      var sectionId = sectionId || false;
+      var $section = $(sectionId);
+
+      if($section.length){
+        headerNav.closeSections(sectionId);
       }
     },
 
-    closeSections: function () {
-      headerNav.$menuItems.children().each(function(key, value){
-        var sectionID = $(value).children().attr("href");
-        var targetDiv = headerNav.$main.find(sectionID);
-        if(targetDiv.hasClass("active")) {
-          targetDiv.removeClass("active");
+    closeSections: function (exclude) {
+      headerNav.$menuItems.children('li').each(function(){
+        var $menuItem = $(this);
+        var $menuLink = $menuItem.find('> a');
+        var sectionId = $menuLink.attr('href');
+        var $section = headerNav.$main.find(sectionId);
+        
+        if(sectionId != exclude){
+          $section.removeClass('active');
+        }
+        else{
+          $section.addClass('active');
         }
       });
     },
 
     checkUrl: function () {
-        var sectionID = location.hash;
-        headerNav.showSection(sectionID);
+        var sectionId = location.hash;
+        headerNav.showSection(sectionId);
     }
   }
 
