@@ -10,9 +10,9 @@ $( document ).ready( function ($) {
 
     dom: function () {
       headerNav.$header = $('#header');
-      headerNav.$nav = headerNav.$header.find('#main-nav');
-      headerNav.$navToggle = headerNav.$nav.find('#menuBtn');
-      headerNav.$menuItems = headerNav.$nav.find('.menu-items');
+      headerNav.$nav = headerNav.$header.find('#header-nav');
+      headerNav.$navToggle = headerNav.$nav.find('#header-nav-toggle');
+      headerNav.$menuItems = headerNav.$nav.find('> ul');
       headerNav.$menuLinks = headerNav.$menuItems.find('> li > a');
       headerNav.$logo = headerNav.$header.find('.header-logo');
       headerNav.$main = $('#main');

@@ -11,17 +11,17 @@ nav:
 social-items:
   -
     link: 'facebook.com'
-    img: './assets/img/facebook.png'
+    img: './assets/img/icons/facebook.png'
     text: 'Facebook'
   -
     link: 'twitter.com'
-    img: './assets/img/twitter.png'
+    img: './assets/img/icons/twitter.png'
     text: 'Twitter'
   -
     link: 'youtube.com'
-    img: './assets/img/youtube.png'
+    img: './assets/img/icons/youtube.png'
     text: 'YouTube'
   -
     link: 'plus.google.com'
-    img: './assets/img/google-plus.png'
+    img: './assets/img/icons/google-plus.png'
     text: 'Google Plus'
