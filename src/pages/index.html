@@ -7,12 +7,21 @@ meta-title: Homepage
   {{> global-navigation}}
 </header>
 <main id="main">
-  <div class="row">
-    <div class="column large-12">
-      {{> services}}
-      {{> contact}}
-    </div>
-  </div>
+  <section id="services" class="section">
+     <div class="row">
+        <div class="column small-12">
+          {{> services}}
+        </div>
+     </div>
+  </section>
+
+  <section id="contact" class="section">
+      <div class="row">
+         <div class="column small-12">
+           {{> contact}}
+         </div>
+      </div>
+   </section>
 </main>
 <footer id="footer">
   {{> footer}}
