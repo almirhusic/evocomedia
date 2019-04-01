@@ -1,16 +1,21 @@
-<div class="top-bar-outter">
-  <div class="top-bar small-3">
-      <div class="icons">
-          <a href="https://facebook.com" target="_blank"><img src="./assets/img/facebook.png" alt=""></a>
-          <a href="https://twitter.com" target="_blank"><img src="./assets/img/twitter.png" alt=""></a>
-          <a href="https://youtube.com" target="_blank"><img src="./assets/img/youtube.png" alt=""></a>
-          <a href="https://plus.google.com" target="_blank"><img src="./assets/img/google-plus.png" alt=""></a>
-      </div>
+<div class="header-top">
+  <div class="row full-width large-4">
+    <div class="columns small-12">
+      <nav class="header-social-nav">
+        <ul>
+          {{#each global.social-items}}
+            <a href="https://{{link}}" target="_blank"><img src="{{img}}" alt="{{text}}"></a>
+          {{/each}}
+        </ul>
+      </nav>
+    </div>
   </div>
 </div>
 
-<div class="row">
-  <div class="logo">
-      <a href="#"><img src="./assets/img/logo.png" alt="EVOCOMEDIA"></a>
+<div class="header-middle">
+  <div class="row">
+    <div class="columns small-12">
+      <a href="#" class="header-logo"><img src="./assets/img/logo.png" alt="EVOCOMEDIA"></a>
+    </div>
   </div>
 </div>

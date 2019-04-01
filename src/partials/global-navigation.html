@@ -1,10 +1,16 @@
-<nav id="nav">
-  <button type="button" id="menuBtn" name="nav-button"></button>
-  <ul class="menu-items">
-      {{#each global.nav}}
-          <li>
-              <a href="{{link}}" id="{{id}}">{{text}}</a>
-          </li>
-      {{/each}}
-  </ul>
-</nav>
+<div class="header-bottom">
+    <div class="row">
+        <div class="column small-12">
+            <nav id="main-nav" class="header-nav">
+                <a id="menuBtn" class="header-nav-toggle"></a>
+                <ul class="menu-items">
+                    {{#each global.nav}}
+                        <li>
+                            <a href="{{link}}" id="{{id}}">{{text}}</a>
+                        </li>
+                    {{/each}}
+                </ul>
+            </nav>
+        </div>
+    </div>
+</div>

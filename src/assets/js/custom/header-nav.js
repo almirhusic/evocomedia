@@ -5,20 +5,21 @@ $( document ).ready( function ($) {
     init: function () {
       headerNav.dom();
       headerNav.events();
-
       headerNav.checkUrl();
     },
 
     dom: function () {
       headerNav.$header = $('#header');
-      headerNav.$nav = headerNav.$header.find('#nav');
+      headerNav.$nav = headerNav.$header.find('#main-nav');
       headerNav.$navToggle = headerNav.$nav.find('#menuBtn');
       headerNav.$menuItems = headerNav.$nav.find('.menu-items');
-      headerNav.$logo = headerNav.$header.find('.logo');
+      headerNav.$menuLinks = headerNav.$menuItems.find('> li > a');
+      headerNav.$logo = headerNav.$header.find('.header-logo');
       headerNav.$main = $('#main');
     },
 
     events: function () {
+
       //open navigation
       headerNav.$navToggle.on('click', function () {
         if(!headerNav.$menuItems.hasClass('active')){
@@ -29,8 +30,10 @@ $( document ).ready( function ($) {
       });
 
       //show section for clicked ID
-      headerNav.$menuItems.on('click', function (e) {
-        var sectionId = e.target.href.substring(e.target.href.indexOf('#'));
+      headerNav.$menuLinks.on('click', function () {        
+        var sectionId = $(this).attr('href');
+
+        headerNav.closeNav();
         headerNav.showSection(sectionId);    
       });
 
@@ -61,10 +64,8 @@ $( document ).ready( function ($) {
     },
 
     closeSections: function (exclude) {
-      headerNav.$menuItems.children('li').each(function(){
-        var $menuItem = $(this);
-        var $menuLink = $menuItem.find('> a');
-        var sectionId = $menuLink.attr('href');
+      headerNav.$menuLinks.each( function () {
+        var sectionId = $(this).attr('href');
         var $section = headerNav.$main.find(sectionId);
         
         if(sectionId != exclude){
@@ -77,8 +78,8 @@ $( document ).ready( function ($) {
     },
 
     checkUrl: function () {
-        var sectionId = location.hash;
-        headerNav.showSection(sectionId);
+      var sectionId = location.hash;
+      headerNav.showSection(sectionId);
     }
   }
 

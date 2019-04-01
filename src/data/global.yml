@@ -7,3 +7,21 @@ nav:
     link: '#contact'
     text: Contact us
     id: contact_link_nav
+
+social-items:
+  -
+    link: 'facebook.com'
+    img: './assets/img/facebook.png'
+    text: 'Facebook'
+  -
+    link: 'twitter.com'
+    img: './assets/img/twitter.png'
+    text: 'Twitter'
+  -
+    link: 'youtube.com'
+    img: './assets/img/youtube.png'
+    text: 'YouTube'
+  -
+    link: 'plus.google.com'
+    img: './assets/img/google-plus.png'
+    text: 'Google Plus'
