@@ -2,20 +2,18 @@
 meta-title: Homepage
 ---
 
-<header>
-  <div class="wrap">
-    {{> top-bar}}
-    {{> global-navigation}}
-  </div>
+<header id="header">
+  {{> top-bar}}
+  {{> global-navigation}}
 </header>
-<main>
-  <div class="wrap">
-    {{> services}}
-    {{> contact}}
+<main id="main">
+  <div class="row">
+    <div class="column large-12">
+      {{> services}}
+      {{> contact}}
+    </div>
   </div>
 </main>
-<footer>
-  <div class="wrap">
-    {{> footer}}
-  </div>
+<footer id="footer">
+  {{> footer}}
 </footer>

@@ -1,11 +1,10 @@
-<nav class="nav">
-  <button type="button" id="menuBtn" name="nav-button">
-  </button>
-  <ul class="menu-items inactive">
-    {{#each global.nav}}
-      <li>
-        <a href="{{link}}" id="{{id}}"><span>{{text}}</span></a>
-      </li>
-    {{/each}}
+<nav id="nav">
+  <button type="button" id="menuBtn" name="nav-button"></button>
+  <ul class="menu-items">
+      {{#each global.nav}}
+          <li>
+              <a href="{{link}}" id="{{id}}">{{text}}</a>
+          </li>
+      {{/each}}
   </ul>
 </nav>

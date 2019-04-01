@@ -1,0 +1,35 @@
+$font-family-stack: 'DIN Web Pro', Helvetica;
+$base-color: #fff;
+
+body{
+    background: {
+        image: url('../img/background.png');
+        repeat: no-repeat;
+        position: center;
+        size: cover;
+    }
+    
+    color: $base-color;
+    display: flex;
+    min-height: 100vh;
+    flex-direction: column;
+
+    font: {
+        family: $font-family-stack;
+        weight: normal;
+        style: normal;
+    }
+}
+
+#main {
+    flex: 1 0 auto;
+
+    #services,
+    #contact {
+        display: none;
+        
+        &.active {
+            display: block;
+        }
+    }
+}

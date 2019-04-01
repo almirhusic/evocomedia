@@ -1,0 +1,34 @@
+$f_padding: 50px;
+$font-family-stack: 'DIN Web Pro', Helvetica;
+
+#footer {
+    background: {
+        image: url('../img/footer-background.png');
+        repeat: no-repeat;
+        size: contain;
+        position: left;
+    }
+    margin-top: 20px;
+    padding: {
+        top: $f_padding;
+        bottom: $f_padding;
+    }
+    
+    .left {
+        border-right: 1px solid white;
+        padding-right: 80px;
+
+        span{
+            text-transform: uppercase;
+            font: {
+                family: $font-family-stack;
+                size: 24px;
+                weight: bold;
+            }
+        }
+    }
+
+    .right {
+        padding-left: 80px;
+    }
+}

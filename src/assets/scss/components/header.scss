@@ -1,0 +1,95 @@
+$li-color: #fff;
+$margin-tbi: 24px;
+$margin-nav-items: 58px;
+
+#header{
+    .top-bar-outter {
+        display: flex;
+        justify-content: flex-end;
+    
+        .top-bar {
+            background: {
+                image: url('../img/top-bar-background.png');
+                size: contain;
+                repeat: no-repeat;
+                position: center;
+            }
+
+            height: 72px;
+            display: flex;
+            flex-direction: column;
+            align-items: flex-end;
+            justify-content: center;
+            
+            .icons{
+                display: inline-flex;
+                flex-direction: row;
+                align-items: center;
+                margin: 0 auto;
+            }
+
+            & a {
+                margin: {
+                    top: -10px;
+                    left: $margin-tbi / 2;
+                    right: $margin-tbi / 2;
+                }
+            }
+        }
+    }
+
+    .logo {
+        margin: 0 auto;
+        margin-top: 82px;
+    }
+}
+
+#nav {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 108px;
+
+    #menuBtn {
+        width: 50px;
+        height: 35px;
+        background: url('../img/nav-background-closed.png');
+
+        &:focus { outline: none; }
+
+        &:hover { cursor: pointer; }
+
+        &.active { background: url('../img/nav-background-open.png'); }
+    }
+
+    .menu-items {
+        display: none;
+        list-style: none;
+        margin: 0;
+        padding: 0;
+
+        &.active{ display: block; }
+
+        li { 
+            text-align: center; 
+            
+            margin: {
+                top: $margin-nav-items / 2;
+                bottom: $margin-nav-items / 2;
+            }
+            
+            &:first-child {
+                margin-top: $margin-nav-items;
+            }
+
+            & a {
+                font-size: 24px;
+                text-transform: uppercase;
+                color: $li-color;
+                text-decoration: none;
+                border-bottom: 5px solid white;
+                padding-bottom: 5px;
+            }
+        }
+    }
+}
