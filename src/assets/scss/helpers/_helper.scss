@@ -1,0 +1,98 @@
+//text aligns
+.text {
+    &-left {
+        text-align: left;
+        
+        &-medium {
+            @include breakpoint(medium){
+                text-align: left;
+            }
+        }
+
+        &-large {
+            @include breakpoint(large){
+                text-align: left;
+            }
+        }
+
+        &-xlarge {
+            @include breakpoint(xlarge){
+                text-align: left;
+            }
+        }
+    }
+    &-center {
+        text-align: center;
+
+        &-medium {
+            @include breakpoint(medium){
+                text-align: center;
+            }
+        }
+
+        &-large {
+            @include breakpoint(large){
+                text-align: center;
+            }
+        }
+        
+        &-xlarge {
+            @include breakpoint(xlarge){
+                text-align: center;
+            }
+        }
+    }
+    &-right {
+        text-align: right;
+
+        &-medium {
+            @include breakpoint(medium){
+                text-align: right;
+            }
+        }
+
+        &-large {
+            @include breakpoint(large){
+                text-align: right;
+            }
+        }
+        
+        &-xlarge {
+            @include breakpoint(xlarge){
+                text-align: right;
+            }
+        }
+    }
+}
+
+//float
+.float {
+    &-left {
+        float: left;
+    }
+    &-right {
+        float: right;
+    }
+}
+
+//font size
+.fs {
+    &-14{
+        font-size: 14px;
+    }
+    &-16{
+        font-size: 16px;
+    }
+    &-18{
+        font-size: 18px;
+    }
+    &-20{
+        font-size: 20px;
+    }
+    &-22{
+        font-size: 22px;
+    }
+    &-24{
+        font-size: 24px;
+    }
+}

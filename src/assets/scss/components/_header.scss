@@ -7,12 +7,6 @@
         margin-bottom: 80px;
     }
 
-    @include breakpoint(large){
-        .large-text-right {
-            text-align: right;
-        }
-    }
-
     .header-social-nav {
         display: inline-block;
         width: 320px;
@@ -26,20 +20,21 @@
         }
 
         ul {
+            display: block;
             padding: 0;
-            margin: {
-                left: auto;
-                right: auto;
-                top: 18px;
-            }
+            margin: 15px 0 0;
+            list-style: none;
 
             li {
                 display: inline;
-                margin-left: $margin-tb-li / 2;
-                margin-right: $margin-tb-li / 2;
+                padding: 0;
+                margin: 0 12px;
+                list-style: none;
+                
                 &:first-child {
                     margin-left: 0;
                 }
+                
                 &:last-child {
                     margin-right: 0;
                 }
@@ -77,16 +72,15 @@
             
             
             margin: {
-                top: $margin-nav-items / 2;
-                bottom: $margin-nav-items / 2;
+                top: 26px;
+                bottom: 26px;
             }
             
             &:first-child {
-                margin-top: $margin-nav-items;
+                margin-top: 58px;
             }
 
             & a {
-                font-size: 24px;
                 text-transform: uppercase;
                 color: $color-white;
                 text-decoration: none;
