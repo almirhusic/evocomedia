@@ -1,5 +1,4 @@
-$li-color: #fff;
-$margin-nav-items: 58px;
+@import 'helpers/variables';
 
 
 #header {
@@ -8,34 +7,42 @@ $margin-nav-items: 58px;
         margin-bottom: 80px;
     }
 
-    .header-middle,
-    .header-bottom {
-        margin-top: 80px;
+    @include breakpoint(large){
+        .large-text-right {
+            text-align: right;
+        }
     }
 
-    .header-middle {
-        text-align: center;
-    }
-    
     .header-social-nav {
-        display: flex;
-        text-align: center;
+        display: inline-block;
+        width: 320px;
+        height: 72px;        
+        
         background: {
             image: url('../img/top-bar-background.png');
-            size: contain;
+            size: auto;
             repeat: no-repeat;
             position: center;
         }
 
         ul {
             padding: 0;
-            margin-left: auto;
-            margin-right: auto;
+            margin: {
+                left: auto;
+                right: auto;
+                top: 18px;
+            }
 
             li {
                 display: inline;
-                margin-left: 10px;
-                margin-right: 10px;
+                margin-left: $margin-tb-li / 2;
+                margin-right: $margin-tb-li / 2;
+                &:first-child {
+                    margin-left: 0;
+                }
+                &:last-child {
+                    margin-right: 0;
+                }
             }
         }
     }
@@ -67,7 +74,7 @@ $margin-nav-items: 58px;
         &.active{ display: block; }
 
         li { 
-            text-align: center; 
+            
             
             margin: {
                 top: $margin-nav-items / 2;
@@ -81,7 +88,7 @@ $margin-nav-items: 58px;
             & a {
                 font-size: 24px;
                 text-transform: uppercase;
-                color: $li-color;
+                color: $color-white;
                 text-decoration: none;
                 border-bottom: 5px solid white;
                 padding-bottom: 5px;
@@ -89,38 +96,3 @@ $margin-nav-items: 58px;
         }
     }
 }
-
-// #header{
-//     .header-top {            
-//         .header-social-nav{
-//             background: {
-//                 image: url('../img/top-bar-background.png');
-//                 size: contain;
-//                 repeat: no-repeat;
-//                 position: center;
-//             }
-//             flex-direction: row;
-//             align-items: center;
-//             margin: 0 auto;
-
-//             ul{
-//                 list-style: none;
-//                 padding: 0;
-//             }
-//         }
-
-//         & a {
-//             margin: {
-//                 top: -10px;
-//                 left: $margin-tbi / 2;
-//                 right: $margin-tbi / 2;
-//             }
-//         }
-//     }
-
-//     .header-middle {
-//         margin: 0 auto;
-//         margin-top: 82px;
-//         text-align: center;
-//     }
-// }

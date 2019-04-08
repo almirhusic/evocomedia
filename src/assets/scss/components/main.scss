@@ -1,5 +1,5 @@
-$font-family-stack: 'DIN Web Pro', Helvetica;
-$base-color: #fff;
+@import 'helpers/variables';
+
 
 body{
     background: {
@@ -16,6 +16,7 @@ body{
 
     font: {
         family: $font-family-stack;
+        size: $font-base;
         weight: normal;
         style: normal;
     }

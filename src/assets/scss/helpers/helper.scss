@@ -1,0 +1,44 @@
+//text aligns
+.text {
+    &-left {
+        text-align: left;
+    }
+    &-center {
+        text-align: center;
+    }
+    &-right {
+        text-align: right;
+    }
+}
+
+//float
+.f {
+    &-left {
+        float: left;
+    }
+    &-right {
+        float: right;
+    }
+}
+
+//font size
+.fs {
+    &-14{
+        font-size: 14px;
+    }
+    &-16{
+        font-size: 16px;
+    }
+    &-18{
+        font-size: 18px;
+    }
+    &-20{
+        font-size: 20px;
+    }
+    &-22{
+        font-size: 22px;
+    }
+    &-24{
+        font-size: 24px;
+    }
+}
