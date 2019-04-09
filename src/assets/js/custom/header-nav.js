@@ -21,16 +21,18 @@ $( document ).ready( function ($) {
     events: function () {
 
       //open navigation
-      headerNav.$navToggle.on('click', function () {
-        if(!headerNav.$menuItems.hasClass('active')){
+      headerNav.$navToggle.unbind('click.nav-toggle');
+      headerNav.$navToggle.on('click.nav-toggle', function () {
+        if( !headerNav.$nav.hasClass('is-expanded') ) {
           headerNav.openNav();
-        }else{
+        } else {
           headerNav.closeNav();
         }
       });
 
       //show section for clicked ID
-      headerNav.$menuLinks.on('click', function () {        
+      headerNav.$menuLinks.unbind('click.menu-links');
+      headerNav.$menuLinks.on( 'click.menu-links', function () {        
         var sectionId = $(this).attr('href');
 
         headerNav.closeNav();
@@ -38,20 +40,21 @@ $( document ).ready( function ($) {
       });
 
       //close all section on logo click
-      headerNav.$logo.on('click', function () {
+      headerNav.$logo.unbind('click.logo');
+      headerNav.$logo.on( 'click.logo', function () {
         headerNav.closeNav();
-        headerNav.closeSections();
+        headerNav.closeSections('');
       });
     },
 
     openNav: function () {
-      headerNav.$navToggle.addClass('active');
-      headerNav.$menuItems.addClass('active');
+      headerNav.$nav.addClass('is-expanded');
+      headerNav.$navToggle.addClass('is-active');
     },
 
     closeNav: function () {
-      headerNav.$navToggle.removeClass('active');
-      headerNav.$menuItems.removeClass('active');
+      headerNav.$nav.removeClass('is-expanded');
+      headerNav.$navToggle.removeClass('is-active');
     },
 
     showSection: function(sectionId){
@@ -60,6 +63,7 @@ $( document ).ready( function ($) {
 
       if($section.length){
         headerNav.closeSections(sectionId);
+        $section.addClass('is-active');
       }
     },
 
@@ -69,10 +73,7 @@ $( document ).ready( function ($) {
         var $section = headerNav.$main.find(sectionId);
         
         if(sectionId != exclude){
-          $section.removeClass('active');
-        }
-        else{
-          $section.addClass('active');
+          $section.removeClass('is-active');
         }
       });
     },

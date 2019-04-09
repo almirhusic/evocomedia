@@ -1,0 +1,17 @@
+body{
+    background-image: url('../img/bg/bg.png');
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    
+    color: $color-white;
+    display: flex;
+    min-height: 100vh;
+    flex-direction: column;
+    
+    font-family: $font-family-din;
+    font-size: $font-primary;
+    font-weight: normal;
+    font-style: normal;
+}
+

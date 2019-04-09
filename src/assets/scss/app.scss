@@ -64,4 +64,10 @@
 // @include motion-ui-transitions;
 // @include motion-ui-animations;
 
-@import "global/typography", "components/header", "components/main", "components/footer", "helpers/helper";
+@import "variables";
+@import "helpers";
+@import "global/base";
+@import "global/fonts";
+@import "components/header";
+@import "components/main";
+@import "components/footer";
