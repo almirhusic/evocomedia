@@ -1,12 +1,101 @@
 #main {
     flex: 1 0 auto;
 
-    #services,
-    #contact {
+    .page-content {
         display: none;
         
         &.is-active {
             display: block;
+        }
+    }
+}
+
+.section {
+    display: block;
+    padding-top: $padding-section;
+    padding-bottom: $padding-section;
+
+    @include breakpoint(large) {
+        padding-top: $padding-section-desktop;
+        padding-bottom: $padding-section-desktop;
+    }
+
+    // padding variations
+    &.padding-small {
+        padding-top: $padding-section-small;
+        padding-bottom: $padding-section-small;
+
+        @include breakpoint(large) {
+            padding-top: $padding-section-small-desktop;
+            padding-bottom: $padding-section-small-desktop;
+        }
+    }
+
+    &.padding-small-top {
+        padding-top: $padding-section-small;
+
+        @include breakpoint(large) {
+            padding-top: $padding-section-small-desktop;
+        }
+    }
+
+    &.padding-small-bottom {
+        padding-bottom: $padding-section-small;
+
+        @include breakpoint(large) {
+            padding-bottom: $padding-section-small-desktop;
+        }
+    }
+
+    &.padding-large {
+        padding-top: $padding-section-large;
+        padding-bottom: $padding-section-large;
+
+        @include breakpoint(large) {
+            padding-top: $padding-section-large-desktop;
+            padding-bottom: $padding-section-large-desktop;
+        }
+    }
+
+    &.padding-large-top {
+        padding-top: $padding-section-large;
+
+        @include breakpoint(large) {
+            padding-top: $padding-section-large-desktop;
+        }
+    }
+
+    &.padding-large-bottom {
+        padding-bottom: $padding-section-large;
+
+        @include breakpoint(large) {
+            padding-bottom: $padding-section-large-desktop;
+        }
+    }
+
+    &.no-padding {
+        padding-top: 0;
+        padding-bottom: 0;
+
+        @include breakpoint(large) {
+            padding-top: 0;
+            padding-bottom: 0;
+        }
+    }
+
+    &.no-padding-top {
+        padding-top: 0;
+
+        @include breakpoint(large) {
+            padding-top: 0;
+        }
+    }
+
+    &.no-padding-bottom {
+        padding-bottom: 0;
+
+        @include breakpoint(large) {
+            padding-bottom: 0;
         }
     }
 }

@@ -1,8 +1,34 @@
 //colors
 $color-white: #fff;
+$color-primary-dark: #ba481f;
+$color-primary: #ec5018;
+$color-primary-light: #ee9a08;
+$color-text: #000;
+$color-text-inverse: #fff;
 
 //font 
 $font-family-din: 'DIN Web Pro';
 $font-primary: 18px;
 
-$footer_padding: 50px;
+//padding section
+$padding-section: 40px;
+$padding-section-desktop: 60px;
+
+$padding-section-small: 20px;
+$padding-section-small-desktop: 40px;
+
+$padding-section-large: 50px;
+$padding-section-large-desktop: 100px;
+
+
+//form variables
+$input-height: 60px;
+$input-font-size: 18px;
+$input-line-height: 24px;
+$input-border-width: 1px;
+
+//submit btn variables
+$submit-height: $input-height;
+$submit-font-size: $input-font-size;
+$submit-line-height: $input-line-height;
+$submit-border-width:$input-border-width;

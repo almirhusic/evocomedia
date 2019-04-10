@@ -8,21 +8,33 @@ meta-title: Homepage
   {{> header-bottom}}
 </header>
 <main id="main">
-  <section id="services" class="section">
-     <div class="row">
-        <div class="column small-12">
-          {{> services}}
-        </div>
-     </div>
-  </section>
-
-  <section id="contact" class="section">
+  <div id="services" class="page-content">
+    <section class="section">
       <div class="row">
-         <div class="column small-12">
-           {{> contact}}
-         </div>
+          <div class="column small-12">
+            {{> services}}
+          </div>
       </div>
-   </section>
+    </section>
+
+    <section class="section no-padding-top">
+        <div class="row">
+            <div class="column small-12">
+              {{> services}}
+            </div>
+        </div>
+      </section>
+  </div>
+
+  <div id="contact" class="page-content">
+    <section class="section">
+        <div class="row">
+          <div class="column small-12">
+            {{> contact}}
+          </div>
+        </div>
+    </section>
+  </div>
 </main>
 <footer id="footer">
   {{> footer}}

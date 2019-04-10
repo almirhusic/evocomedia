@@ -1,22 +1,43 @@
 <form id="test-form">
-  <div>
-    <label>Name</label>
-    <input type="text" name="field_name" placeholder="Your name..."/>
+  <div class="row">
+    <div class="columns small-12 medium-6">
+      <div class="form-item">
+        <label>Name</label>
+        <input type="text" name="name" placeholder="Your name..." required/>
+      </div>
+    </div>
+
+    <div class="columns small-12 medium-6">
+      <div class="form-item">
+        <label>Last name</label>
+        <input type="text" name="last-name" placeholder="Your last name..." required/>
+      </div>
+    </div>
   </div>
-  <div>
-    <label>Last name</label>
-    <input type="text" name="field_last_name" placeholder="Your last name..."/>
+
+  <div class="row">
+    <div class="columns small-12">
+      <div class="form-item">
+        <label>Email</label>
+        <input type="text" name="email" placeholder="Email..." required/>
+      </div>
+    </div>
   </div>
-  <div>
-    <label>Email</label>
-    <input type="text" name="field_email" placeholder="Email..." required/>
+
+  <div class="row">
+    <div class="columns small-12">
+      <div class="form-item">
+        <label>Message</label>
+        <textarea type="text" name="message" rows="5" cols="30" placeholder="Enter your message here..." required></textarea>
+      </div>
+    </div>
   </div>
-  <div>
-    <label>Message</label>
-    <input type="text" name="field_message" placeholder="Enter your message here..." required/>
-  </div>
-  <div>
-    <button type="submit" id="submit-form">Submit</button>
+
+  <div class="row">
+    <div class="columns small-12 medium-6">
+      <div class="form-item">
+        <button type="submit" id="submit-form" class="btn">Submit</button>
+      </div>
+    </div>
   </div>
 </form>
-      
