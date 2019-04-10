@@ -43,10 +43,11 @@
     
     .header-nav {
         display: block;
+        position: relative;
 
         &.is-expanded {
             & .header-nav-toggle {
-                background: url('../img/icons/nav-close.png');
+                background: none;
             }
 
             & ul {
@@ -58,9 +59,48 @@
             display: inline-block;
             width: 50px;
             height: 35px;
-            background: url('../img/icons/nav-hamburger.png');
             outline: none;
             cursor: pointer;
+
+            span,
+            span:before,
+            span:after {
+                display: block;
+                content: '';
+                width: 50px;
+                height: 5px;
+                position: absolute;
+                background-color: white;
+                transition-property: transform, background-color;
+                transition-duration: 0.5s, 1.5s;
+                transform-origin: top left;
+            }
+
+            span {
+                top: 15px;            
+
+                &:before {
+                    top: -15px;
+                }
+
+                &:after {
+                    bottom: -15px;
+                }
+            }
+
+            &.is-active {
+                span {
+                    background: transparent;
+    
+                    &:before {
+                        transform: skewY(31deg);
+                    }
+    
+                    &:after {
+                        transform: skewY(-31deg);
+                    }
+                }
+            }
         }
 
         & ul {
