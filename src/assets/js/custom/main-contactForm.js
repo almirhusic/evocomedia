@@ -8,7 +8,7 @@ $( document ).ready( function ($) {
     },
 
     dom: function () {
-      main.$contactForm = $('form#test-form');
+      main.$contactForm = $('form#contact-form');
       main.$submit = $('#submit-form');
     },
 
