@@ -61,51 +61,53 @@
             height: 35px;
             outline: none;
             cursor: pointer;
+            position: relative;
 
-            span,
-            span:before,
-            span:after {
+            & > span,
+            &::before,
+            &::after {
                 display: block;
                 content: '';
                 width: 50px;
                 height: 5px;
-                position: absolute;
                 background-color: white;
-                transition-property: transform, background-color;
-                transition-duration: 0.5s, 1.5s;
+                position: absolute;
+            }
+
+            & > span {
+                top: 15px;
+                transition: background-color 1.5s;
+            }
+
+            &::before {
+                top: 0;
+                transition: transform 0.5s;
                 transform-origin: top left;
             }
 
-            
-
-            span {
-                top: 15px;            
-
-                &:before {
-                    top: -15px;
-                }
-
-                &:after {
-                    bottom: -15px;
-                }
+            &::after {
+                bottom: 0;
+                transition: transform 0.5s;
+                transform-origin: top left;
             }
 
             &.is-active {
                 span {
                     background: transparent;
-    
-                    &:before {
-                        transform: skewY(31deg);
-                    }
-    
-                    &:after {
-                        transform: skewY(-31deg);
-                    }
+                    transition: background-color 0.5s;
+                }
+
+                &::before {
+                    transform: skewY(31deg);
+                }
+
+                &::after {
+                    transform: skewY(-31deg);
                 }
             }
         }
 
-        & ul {
+        ul {
             display: none;
             padding: 0;
             margin: 0;
