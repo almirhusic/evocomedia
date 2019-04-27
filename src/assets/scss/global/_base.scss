@@ -15,3 +15,14 @@ body{
     font-style: normal;
 }
 
+label {
+    &.error {
+        &::after {
+            content: '';
+            display: inline-block;
+            margin-left: 10px;
+            font-size: 12px;
+            color: red;
+        }
+    }
+}

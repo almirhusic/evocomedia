@@ -39,12 +39,13 @@ input[type='number']{
 	outline: none;
 
 	&.error{
-		border-color: red;
-	}
-
-	& + label.error{
-		display: none !important;
-	}
+        border: 3px solid red;
+    }
+    
+    &::before {
+        content: '';
+        display: inline-block;
+    }
 }
 
 input[type='submit'],
